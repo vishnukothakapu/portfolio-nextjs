@@ -5,11 +5,9 @@ import {
     BrainIcon,
     HomeIcon,
     ScrollTextIcon,
-    UserRoundIcon,
     SunIcon,
     MoonIcon,
 } from "lucide-react";
-import Link from "next/link";
 import React from "react";
 
 import { useTheme } from "next-themes";
@@ -40,8 +38,8 @@ const handleScroll = (e:React.MouseEvent<HTMLElement, MouseEvent>, id:string) =>
     }
 };
 const MenuBar = () => {
-    const { theme, setTheme } = useTheme();
-
+    const { theme, setTheme,resolvedTheme } = useTheme();
+    const currentTheme = theme==="system"?resolvedTheme:theme;
     return (
         <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50">
             <TooltipProvider>
@@ -49,7 +47,7 @@ const MenuBar = () => {
                     direction="middle"
                     className={cn(
                         "px-4 py-2 rounded-xl shadow-lg transition-all duration-300",
-                        theme === "dark"
+                        currentTheme === "dark"
                             ? "bg-[#111213] border border-gray-800"
                             : "bg-white border border-gray-300"
                     )}
@@ -90,7 +88,7 @@ const MenuBar = () => {
                                     onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                                     className="size-12 rounded-full border-none flex items-center justify-center transition-transform duration-300 group-hover:scale-110"
                                 >
-                                    {theme === "dark" ? (
+                                    {currentTheme === "dark" ? (
                                         <SunIcon className="size-6 text-yellow-500 transition-transform duration-300 group-hover:scale-110 " />
                                     ) : (
                                         <MoonIcon className="size-6 text-blue-700 transition-transform duration-300 group-hover:scale-110" />
@@ -99,7 +97,7 @@ const MenuBar = () => {
                             </TooltipTrigger>
                             <TooltipContent>
                                 <p className="font-bold text-sm bg-black text-white dark:bg-white dark:text-black px-2 py-1 rounded-xl">
-                                    {theme === "dark" ? "Light Mode" : "Dark Mode"}
+                                    {currentTheme === "dark" ? "Light Mode" : "Dark Mode"}
                                 </p>
                             </TooltipContent>
                         </Tooltip>
