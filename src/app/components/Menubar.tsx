@@ -29,7 +29,7 @@ const DATA = {
         { href: "#home", icon: HomeIcon, label: "Home" },
         { href: "#skills", icon: BrainIcon, label: "Skills" },
         { href: "#projects", icon: ScrollTextIcon, label: "Projects" },
-        { href: "#", icon: AtSignIcon, label: "Contact" },
+        { href: "#contact", icon: AtSignIcon, label: "Contact" },
     ],
 };
 const handleScroll = (e:React.MouseEvent<HTMLElement, MouseEvent>, id:string) => {
