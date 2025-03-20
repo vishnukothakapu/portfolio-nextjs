@@ -32,7 +32,7 @@ const DATA = {
         { href: "#", icon: AtSignIcon, label: "Contact" },
     ],
 };
-const handleScroll = (e:React.MouseEvent<HTMLAnchorElement, MouseEvent>, id:string) => {
+const handleScroll = (e:React.MouseEvent<HTMLElement, MouseEvent>, id:string) => {
     e.preventDefault();
     const section = document.getElementById(id);
     if (section) {

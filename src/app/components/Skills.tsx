@@ -1,6 +1,7 @@
 "use client";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
+import {IconType} from 'react-icons';
 import {
     SiJavascript,
     SiTypescript,
@@ -23,7 +24,11 @@ import {
     SiFigma
 } from "react-icons/si";
 import { useState, useEffect } from "react";
-
+type SkillType = {
+    name: string;
+    icon:IconType;
+    color: string;
+};
 const skills = [
     { name: "HTML5", icon: SiHtml5, color: "text-[#E34F26]" },
     { name: "CSS3", icon: SiCss3, color: "text-blue-500" },
@@ -48,11 +53,11 @@ const skills = [
 ];
 
 const Skills = () => {
-    const [hoveredSkill, setHoveredSkill] = useState(null);
+    const [hoveredSkill, setHoveredSkill] = useState<SkillType|null>(null);
     const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
 
     useEffect(() => {
-        const handleMouseMove = (e:any) => {
+        const handleMouseMove = (e:MouseEvent) => {
             setCursorPos({ x: e.clientX, y: e.clientY });
         };
         window.addEventListener("mousemove", handleMouseMove);
