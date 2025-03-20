@@ -7,7 +7,7 @@ export const BackgroundLines = ({
                                     className,
                                     svgOptions,
                                 }: {
-    children: React.ReactNode;
+    children?: React.ReactNode;
     className?: string;
     svgOptions?: {
         duration?: number;
