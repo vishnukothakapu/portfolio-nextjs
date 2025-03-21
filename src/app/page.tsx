@@ -28,7 +28,7 @@ const Page = () => {
             <Projects />
             <Contact />
 
-            <footer className="dark:bg-black bg-gray-100 text-gray-900 dark:text-white py-8 px-6 md:px-12 flex flex-col md:flex-row items-center justify-between">
+            <footer className="dark:bg-black bg-gray-50 text-gray-900 dark:text-white py-8 px-6 md:px-12 flex flex-col md:flex-row items-center justify-between">
                 <div className="text-center md:text-left text-md md:text-base">
                     Made with ❤️ by Vishnu.
                 </div>

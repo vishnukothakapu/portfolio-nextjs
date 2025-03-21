@@ -50,8 +50,8 @@ const projects = [
     },
     {
         title: "Recipe Finder App - MealDB API",
-        description: "A mobile-friendly recipe discovery app that fetches data from the MealDB API. Users can search for recipes, view ingredients, and get step-by-step cooking instructions.",
-        image: "/assets/images/recipe_app.jpg",
+        description: "A mobile-friendly recipe discovery app that fetches data from the MealDB API. Users can search for recipes, view ingredients, get step-by-step cooking instructions, add recipes to favorites, and watch video tutorials.",
+        image: "/assets/images/recipe_app.png",
         tech: [
             { Icon: SiReact, color: "text-[#0088CC]" },
             { Icon: SiCss3, color: "text-blue-500" },
@@ -80,7 +80,7 @@ const Projects = () => {
                         <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full rounded-xl p-6 border flex flex-col justify-between">
                             <CardItem
                                 translateZ="50"
-                                className="text-xl font-bold text-neutral-600 dark:text-white"
+                                className="text-xl font-bold text-black dark:text-white"
                             >
                                 {project.title}
                             </CardItem>

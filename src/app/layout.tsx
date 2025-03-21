@@ -6,7 +6,7 @@ import {ThemeProvider} from "@/providers/theme-provider";
 const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Vishnu's Portfolio",
-  description: "Made by Vishnu Kothakapu",
+  description: "Hello, I'm Vishnu Kothakapu",
 };
 
 export default function RootLayout({
@@ -19,7 +19,7 @@ export default function RootLayout({
       <body
         className={`font-satoshi antialiased  dark:bg-[#13151A]`}
       >
-      <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+      <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           {children}
           <Toaster className="dark:bg-white bg-black"/>
       </ThemeProvider>
