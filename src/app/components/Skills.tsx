@@ -46,7 +46,7 @@ const skills = [
     { name: "C++", icon: SiCplusplus, color: "text-[#00599C]" },
     { name: "Git", icon: SiGit, color: "text-[#F05032]" },
     { name: "Postman", icon: SiPostman, color: "text-[#FF6C37]" },
-    { name: "Expo", icon: SiExpo, color: "text-[#1C2024] dark:text-white" },
+    { name: "Expo", icon: SiExpo, color: "text-[#1C2024] dark:text-white " },
     { name: "WebStorm", icon: SiWebstorm, color: "text-blue-500" },
     { name: "Figma", icon: SiFigma, color: "text-purple-500" },
     { name: "Remix", icon: SiRemix, color: "text-black dark:text-white" },
@@ -75,7 +75,7 @@ const Skills = () => {
                 </p>
             </div>
 
-            <div className="max-w-5xl mx-auto px-6 mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 dark:text-white">
+            <div className="max-w-5xl mx-auto px-6 mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 dark:text-white ">
                 {skills.map((skill, index) => (
                     <motion.div
                         key={index}
@@ -85,8 +85,8 @@ const Skills = () => {
                         onMouseEnter={() => setHoveredSkill(skill)}
                         onMouseLeave={() => setHoveredSkill(null)}
                     >
-                        <skill.icon className={`text-4xl ${skill.color}`} />
-                        <Badge variant="secondary" className="mt-3 px-3 py-1 text-sm whitespace-nowrap">
+                        <skill.icon className={`text-4xl ${skill.color} `} />
+                        <Badge variant="secondary" className="mt-3 px-3 py-1 text-sm whitespace-nowrap ">
                             {skill.name}
                         </Badge>
 

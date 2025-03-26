@@ -103,7 +103,7 @@ const Projects = () => {
                                 />
                             </CardItem>
 
-                            <div className="flex justify-between items-center mt-8 w-full">
+                            <div className="flex justify-between items-center sm:mt-8 w-full">
                                 <div className="flex space-x-3">
                                     {project.tech.map(({ Icon, color }, i) => (
                                         <Icon key={i} className={`text-2xl ${color}`} />
