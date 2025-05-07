@@ -13,7 +13,7 @@ const config: Config = {
   			satoshi: [
   				'Satoshi',
   				'sans-serif'
-  			]
+				],
   		},
   		colors: {
   			background: 'hsl(var(--background))',

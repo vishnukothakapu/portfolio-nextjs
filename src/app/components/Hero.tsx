@@ -43,7 +43,7 @@ const Hero = () => {
                        )}
                    </button>
                    <h1 className="text-4xl md:text-7xl font-extrabold bg-clip-text text-transparent bg-gradient-to-b from-slate-950 to-black dark:from-neutral-50 dark:to-neutral-400">
-                       Hello, I'm <br /> <LinkPreview url="https://vishnukothakapu.vercel.app">Vishnu Kothakapu</LinkPreview>{" "}
+                       Hello, I'm <br /> <LinkPreview url="https://github.com/vishnukothakapu">Vishnu Kothakapu</LinkPreview>{" "}
                    </h1>
                    <div className="mt-4 font-bold text-lg md:text-xl dark:text-neutral-300 text-black">
                         <span className="inline-flex items-center">
