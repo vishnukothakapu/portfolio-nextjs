@@ -23,6 +23,8 @@ import {
     SiPostman,
     SiWebstorm,
     SiWordpress,
+    SiSupabase,
+    SiFastapi,
     SiFigma
 } from "react-icons/si";
 import { useState, useEffect } from "react";
@@ -33,28 +35,31 @@ type SkillType = {
 };
 const skills = [
     { name: "HTML5", icon: SiHtml5, color: "text-[#E34F26]" },
-    { name: "CSS3", icon: SiCss3, color: "text-blue-500" },
+    { name: "CSS3", icon: SiCss3, color: "text-[#1572B6]" },
     { name: "Bootstrap", icon: SiBootstrap, color: "text-[#7952B3]" },
-    { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-[#00BCFF]" },
-    { name: "JavaScript", icon: SiJavascript, color: "text-yellow-500" },
-    { name: "TypeScript", icon: SiTypescript, color: "text-blue-500" },
-    { name: "MongoDB", icon: SiMongodb, color: "text-green-500" },
-    { name: "Express.js", icon: SiExpress, color: "text-gray-600 dark:text-gray-300" },
+    { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-[#06B6D4]" },
+    { name: "JavaScript", icon: SiJavascript, color: "text-[#F7DF1E]" },
+    { name: "TypeScript", icon: SiTypescript, color: "text-[#3178C6]" },
+    { name: "MongoDB", icon: SiMongodb, color: "text-[#47A248]" },
+    { name: "Express.js", icon: SiExpress, color: "text-gray-700 dark:text-gray-300" },
     { name: "React.js", icon: SiReact, color: "text-[#61DAFB]" },
-    { name: "Node.js", icon: SiNodedotjs, color: "text-[#5FA04E]" },
-    { name: "Next.js", icon: SiNextdotjs, color: "text-gray-900 dark:text-white" },
-    { name: "React Native", icon: SiReact, color: "text-[#00DBFF]" },
+    { name: "Node.js", icon: SiNodedotjs, color: "text-[#339933]" },
+    { name: "Next.js", icon: SiNextdotjs, color: "text-black dark:text-white" },
+    { name: "React Native", icon: SiReact, color: "text-[#61DBFB]" },
     { name: "WordPress", icon: SiWordpress, color: "text-[#21759B]" },
-    {name:"Solidity", icon: SiSolidity, color: "text-[#363636]"},
-    {name:"Web3.js", icon: SiWeb3Dotjs, color: "text-[#F16822]"},
+    { name: "Solidity", icon: SiSolidity, color: "text-[#363636]" },
+    { name: "Web3.js", icon: SiWeb3Dotjs, color: "text-[#F16822]" },
     { name: "C++", icon: SiCplusplus, color: "text-[#00599C]" },
     { name: "Git", icon: SiGit, color: "text-[#F05032]" },
     { name: "Postman", icon: SiPostman, color: "text-[#FF6C37]" },
-    { name: "Expo", icon: SiExpo, color: "text-[#1C2024] dark:text-white " },
-    { name: "WebStorm", icon: SiWebstorm, color: "text-blue-500" },
-    { name: "Figma", icon: SiFigma, color: "text-purple-500" },
+    { name: "Expo", icon: SiExpo, color: "text-[#000020] dark:text-white" },
+    { name: "Supabase", icon: SiSupabase, color: "text-[#3ECF8E]" },
+    { name: "WebStorm", icon: SiWebstorm, color: "text-[#2496ED]" },
+    { name: "Figma", icon: SiFigma, color: "text-[#F24E1E]" },
+    { name: "FastAPI", icon: SiFastapi, color: "text-[#009688]" },
     { name: "Remix", icon: SiRemix, color: "text-black dark:text-white" },
-];
+  ];
+  
 
 const Skills = () => {
     const [hoveredSkill, setHoveredSkill] = useState<SkillType|null>(null);
